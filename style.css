@@ -1,0 +1,386 @@
+@keyframes pulse {
+    0%, 100%{
+        box-shadow: 0 0 5px black;
+    }
+    50%{
+        box-shadow: 0 0 18px black;
+    }
+}
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px); /* Start slightly below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at original position */
+    }
+}
+@keyframes appearBanner {
+    0% {
+        opacity: 0;
+        transform: translateY(-200px); /* Start slightly below */
+    }
+    100% {
+        opacity: 0.8;
+        transform: translateY(0); /* End at original position */
+    }
+}
+body{
+    font-family: 'Fira Sans', sans-serif;
+    text-align: justify;
+}
+a{
+    text-decoration: none;
+    padding: 5px;
+    color: rgb(248, 229, 195);    
+}
+header, footer{
+    background: linear-gradient(45deg, rgb(0, 0, 0), goldenrod, black);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 1; 
+}
+header{
+    padding-top: 130px;
+    height: 100%;
+}
+.logoContainer{
+    width: 90px;
+    height: 70px;
+    border-radius: 70px;
+    background: linear-gradient(135deg, rgb(248, 229, 195), goldenrod, rgb(248, 229, 195));
+    margin-top: -5px;
+    margin-left: -24px;
+    padding: 10px;
+}
+.logo{
+    width: 90px;
+    margin-top: -3px;
+    margin-left: 5px;
+}
+.fixedHeader{
+    position: fixed;
+    overflow: hidden;
+    margin-top: -130px;
+    height: 80px;
+    background-color: black;
+    opacity: 0.8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100vw;
+    color: rgb(248, 229, 195);    
+    z-index: 99;
+}
+nav{
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    font-size: 24px;
+    >div>a{
+        padding: 12px 30px;
+    }
+}
+nav>div>a:hover{
+    border-radius: 5px;
+    box-shadow: 0 0 8px;
+}
+.accueilPresentation{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100vw;
+    justify-content: space-around;
+    >div{
+        opacity: 0;
+        animation: appearBanner 1s ease-out forwards;
+        background-color: black;
+        color: white;
+        border-radius: 15px;
+    }
+}
+.introduction{
+    width: 45vw;
+    height: 370px;
+    padding: 15px;
+    >p{
+        font-size: 20px;
+        line-height: 35px;
+    }
+}
+.image1{
+    width: 45vw;
+    overflow: hidden;
+    >img{
+        margin-top: 100px;
+        width: 100%;
+        rotate: -20deg;
+        filter: drop-shadow(2px 2px 4px rgb(255, 244, 182));
+    }
+}
+.boutons{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 35px;
+    margin-block: 15px;
+    opacity: 0;
+    animation: appear 0.7s ease-out forwards;
+}
+button{
+    background: black;
+    color: goldenrod;
+    border-radius: 20px;
+    margin: 30px;
+    padding-inline: 25px;
+    padding-block: 5px;
+    font-size: 24px;
+    border: solid 1px black;
+    box-shadow: 0px 0px 7px black;
+    >a:hover{
+        color: black;
+    }
+}
+button:hover{
+    background: linear-gradient(135deg, rgb(248, 229, 195) 0, goldenrod 50%, rgb(248, 229, 195) 100%);
+    animation: pulse 1s infinite;
+}
+h2{
+    margin: 0 0 0 25px;
+    font-size: 30px;
+    padding: 25px;
+}
+ul{
+    margin-left: 20vw;
+    font-size: 24px;
+    line-height: 40px;
+}
+.servicesBtn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    >button{
+        border: solid 1px rgb(214, 171, 63);
+        >a{
+            color: rgb(248, 229, 195);    
+        }
+        >a:hover{
+            color: black;
+        }
+    }
+}
+p{
+    margin: 0 auto;
+    line-height: 45px;
+    max-width: 80vw;
+    font-size: 22px;
+    padding-inline: 15px;
+}
+.videoSection{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    >p{
+        width: 45vw;
+        border-right: solid;
+        padding: 20px;
+    }
+    >div{
+        width: 47vw;
+    }
+
+}
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 10px;
+    font-size: 16px;
+    align-items: center;
+}
+.footerInfo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    >div>p>a{
+        color: black;
+        border-bottom: solid 2px;
+    }
+}
+.gMap{
+    padding: 10px;
+    >iframe{
+        width: 100%;
+        aspect-ratio: 1;
+    }
+}
+.credit{
+    margin-top: 40px;
+}
+@media (max-width: 1023px) {
+    a{
+        font-size: 20px;
+    }
+    .logoContainer{
+        width: 80px;
+        margin-left: -25px;
+        margin-top: -15px;
+    }
+    .logo{
+        width: 70px;
+        margin-top: 3px;
+        margin-left: 8px;
+    }
+    .introduction>p{
+        font-size: 18px;
+        line-height: 30px;
+    }
+    p, ul{
+        font-size: 18px;
+    }
+    .fixedHeader{
+        height: 60px;
+    }
+    nav{
+        margin-top: 15px;
+    }
+    iframe{
+        width: 350px;
+        height: 220px;
+    }
+    .videoSection>div{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .image1>img{
+        margin-top: 150px;
+        rotate: -40deg;
+    }
+}
+
+@media (max-width: 767px) {
+    nav>div>a{
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+    .image1{
+        width: 76vw;
+        margin-bottom: 20px;
+        >img{
+        margin-top: 10px;
+        rotate: 0deg;
+        }
+    }   
+    .accueilPresentation{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .introduction{
+        width: 70vw;
+    }
+    p{
+        line-height: 30px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    ul{
+        font-size: 16px;
+    }
+    .videoSection{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        >p{
+            border-right: none;
+            width: 70vw;
+        }
+    }
+}
+@media (max-width: 500px) {
+    .fixedHeader{
+    }
+    .dropDownMenu, .dropDownBtn{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .dropDownMenu{
+        justify-content: center;
+        opacity: 0.8;
+    }
+    nav{
+        width: auto;
+        flex-direction: column;
+        margin: 20px 20px 0 0;
+        margin-right: 20px;
+        z-index: 999;
+        background-color: black;
+        >div{
+            display: block;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .dropDownBtn{
+        margin-right: 25px;
+        margin-top: 10px;
+        >span{
+        width: 30px;
+        border-bottom: solid 2px;
+        height: 8px;
+        }
+    }
+    h1{
+        font-size: 24px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 27px;
+    }
+    ul{
+        font-size: 14px;
+        margin-left: 5vw;
+        line-height: 32px;
+    }
+    .introduction>p{
+        font-size: 14px;
+        line-height: 27px;
+    }
+    .boutons{
+        margin-left: 0;
+    }
+    .boutons>button{
+        margin: 5px;
+        padding: 10px;
+        font-size: 16px;
+        >a{
+            font-size: 16px;
+        }
+    }
+    .servicesBtn>button{
+        padding: 0 10px 3px;
+        >a{
+            font-size: 16px;
+        }
+    }
+    .footerInfo{
+        font-size: 14px;
+        >div>p>a{
+            font-size: 16px;
+        }
+    }
+    .credit{
+        margin-top: 10px;
+    }
+}

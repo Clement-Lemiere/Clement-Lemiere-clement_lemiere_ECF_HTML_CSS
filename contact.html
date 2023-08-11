@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <div class="fixedHeader">
+            <div class="logoContainer">
+                <a href="index.html">
+                    <img class="logo" src="logoRepair.png" alt="logo">
+                </a>
+            </div>
+            <nav>
+                <div><a href="index.html">Accueil</a></div>
+                <div><a href="contact.html">Contact</a></div>
+                <div><a href="service.html">Services</a></div>
+            </nav>
+        </div>
+        <div class="contactIntro">
+            <div class="introduction">
+                <h1>Compte Fix'n'Play</h1>
+                <p>Venez dans notre atelier Fix'n'Play pour bénéficier de nos conseils d'experts sur la réparation et l'entretien de vos instruments préférés!</p>
+                <p>Fix'n'Play vous garantit un accompagnement personnalisé en fonction de vos besoins, afin de vous procurer la meilleure expériences de jeu possible!</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="info">
+            <div>
+                <h1>titre</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam molestias consequuntur quam exercitationem non odio quidem sequi, beatae aut nobis! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, hic.</p>
+            </div>
+            <button><a href="#form">L'inscription, <br> C'est pas ici!</a></button>
+        </section>
+        <section class="mainContainer">
+            <h2>Contactez-nous!</h2>
+            <form id="form" action="">
+                <fieldset class="personInfo">
+                    <legend>Informations Personnelles</legend>
+                    <div>
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+                    </div>
+                    <div>
+                        <label for="mail">Email :</label>
+                        <input type="email" id="email" name="email" placeholder="webdev@popschool.fr" required>
+                    </div>
+                    <div>
+                        <label for="telephone">Telephone :</label>
+                        <input type="tel" id="telephone" name="telephone" placeholder="0677665544" required>
+                    </div>
+                    <div>
+                        <label for="Password">Mot de passe :</label>
+                        <input type="password" id="password" name="password" placeholder="*****" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>De quel instrument s'agit-il?</legend>
+                    <div>
+                        <label for="instrument">
+                            <select name="instrument" id="instrument" onfocus="this.size=10;" onblur="this.size=0;" onchange="this.size=1; this.blur()">
+                                <option value="" name="" id="">Ton instrument</option>option
+                                <option value="guitare" name="guitare" id="guitare">Guitare</option>
+                                <option value="basse" name="basse" id="basse">Basse</option>
+                                <option value="piano" name="piano" id="piano">Piano</option>
+                                <option value="banjo" name="banjo" id="banjo">Banjo</option>
+                                <option value="violon" name="violon" id="violon">Violon</option>
+                                <option value="percussions" name="percussions" id="percussions">Percussions</option>
+                                <option value="ukulele" name="ukulele" id="ukulele">Ukulele</option>
+                                <option value="flute" name="flute" id="flute">Flûte</option>
+                            </select>
+                        </label>
+                    </div>
+                    <div>
+                        <p>Des questions ou observations? C'est ici!</p>
+                        <div>
+                            <label for="question"></label>
+                            <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Ma guitare a des faux-contacts..."></textarea>
+                        </div>
+                        <div>
+                            
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Newsletter</legend>
+                    <div class="news">
+                        <label for="newsletter">S'abonner à la newsletter</label>
+                        <input type="checkbox" id="newsletter" name="nesletter">
+                    </div>
+                </fieldset>
+                <input class="submit" type="submit" value="Envoyer">
+            </form>
+        </section>
+    </main>
+    <footer>
+        
+    </footer>
+</body>
+</html>
