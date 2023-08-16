@@ -3,70 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Accueil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ea282868fc.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="services.css">
 </head>
 <body>
     <header>
         <div class="fixedHeader">
-            <div class="logoContainer">
-                <a href="index.html">
+            <div class="overflow">
+                <a class="logoContainer" href="index.html">
                     <img class="logo" src="logoRepair.png" alt="logo">
                 </a>
             </div>
-            <nav>
-                <div><a href="index.html">Accueil</a></div>
-                <div><a href="contact.html">Contact</a></div>
-                <div><a href="service.html">Services</a></div>
-            </nav>
+            <div class="dropDownMenu">
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="dropDownBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <nav>                
+                    <div><a href="index.html">Accueil</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                    <div><a href="service.html">Services</a></div>
+                </nav>
+            </div>
         </div>
         <div class="accueilPresentation">
             <div class="introduction">
-                <h1>Services Fix'n'Play</h1>
+                <h1>Les services Fix'n'Play</h1>
                 <p>Venez dans notre atelier Fix'n'Play pour bénéficier de nos conseils d'experts sur la réparation et l'entretien de vos instruments préférés!</p>
                 <p>Fix'n'Play vous garantit un accompagnement personnalisé en fonction de vos besoins, afin de vous procurer la meilleure expériences de jeu possible!</p>
             </div>
-            <div class="image1">
-                <img src="ltd_ec1000.png" alt="guitare">
+            <div class="image">
+                <img src="brass.jpg" alt="brass">
+                <img src="piano.jpg" alt="piano">
+                <img src="violin.jpg" alt="violin">
             </div>
         </div>
         <div class="boutons">
-            <button><a href="#services">Services</a></button>
-            <button><a href="#aPropos">À Propos</a></button>
+            <button><a href="#help">Services</a></button>
         </div>
     </header>
-    <main>
-        <section id="services">
-            <div>
-                <h2>Les services de Fix'n'Play</h2>
-                <ul>
-                    <li>Entretien annuel</li>
-                    <li>Diagnostique de l'état général de l'instrument</li>
-                    <li>Changement des pièces usées</li>
-                    <li>Nettoyage complet de l'instrument</li>
-                    <li>Réglages de l'instrument</li>
-                </ul>
-                <div class="servicesBtn">
-                    <button>
-                        <a>Services</a>
-                    </button>
-                </div>
-            </div>
-        </section>
-        <section id="aPropos">
-            <h2>À Propos</h2>
-            <div class="videoSection">
-                <p>Fix'n'Play est un atelier de réparation et d'entretien d'instruments de musique, créé en 2017 par un groupe de musiciens passionnés. Basé sur l'ensemble du territoire, l'atelier Fix'n'Play vous assure une qualité d'accompagnement optimale! </p>
-                <div><iframe width="480" height="265" src="https://www.youtube.com/embed/4CtqfHmssx8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
-            </div>
-        </section>
+    <main id="help">
+        <div>
+            <h3>Forfait Entretien & Réglages</h3>
+            <p>Nos services proposent un forfait d'entretien pour votre instrument. Nettoyage, réglage complet, changement de pièce d'usures en cas de nécessité.</p>
+        </div>
+        <div>
+            <h3>Diagnostique complet</h3>
+            <p>En cas de défaut sur votre instrument, nos effectuons un diagnostique complet avec devis avant réparations. Nos prodiguons également des conseils pour la réparation faite par le client.</p>
+        </div>
+        <div>
+            <h3>Nettoyage complet</h3>
+            <p>Nous effectuons des nettoyages complets des instruments sans rendez-vous. Présentez-vous dans l'un de nos ateliers, le nettoyage se fait en moins de 20 minutes. Produits de protections offerts</p>
+        </div>
+        <div>
+            <h3>Réglage complet</h3>
+            <p>Nous effectuons des réglages complets des instruments sans rendez-vous. Présentez-vous dans l'un de nos ateliers, le réglage se fait en moins de 30 minutes. Produits de protections offerts</p>
+        </div>
+        <div>
+            <h3>Estimations de valeur</h3>
+            <p>Si vous devez malheureusement vous séparer de votre instrument, nous estimons sa valeur sur les bases du marché de l'occasion actuel</p>
+        </div>
+        <div>
+            <h3>Tutoriels</h3>
+            <p>Si vous souhaitez en apprendre plus sur les instruments et leur fonctionnement, suivez nos tutoriels!</p>
+        </div>
+            
     </main>
     <footer>
-        <div>Web-Dev-PopSchool-Lens-Promotion-2023</div>
+        <div>
+            <div class="footerInfo">
+                <div id="textContainer">
+                    <p>Adresse: 84 Rue Paul Bert, 62300 Lens</p>
+                    <p>Mail : <a href="mailto:contact-fnp@fixnplay.com">contact-fnp@fixnplay.com</a></p>
+                    <p>Téléphone : 03 21 25 26 27</p>
+                </div>
+                <div id="iconesReseau">
+                    <a href="https://www.facebook.com/POPSchoolFr/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/popschoolfr/?hl=fr">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://fr.linkedin.com/company/popschoolp.l.u.s">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="gMap">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.5725659593663!2d2.8093462802622726!3d50.430434926023636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd30f32995b9ed%3A0x227e61b83fe3bfcd!2sLouvre%20Lens%20Vall%C3%A9e!5e0!3m2!1sfr!2sfr!4v1691672755020!5m2!1sfr!2sfr"
+                width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+    <div class="credit">\--Web-Dev-PopSchool-Lens-Promotion-2023--/</div>
     </footer>
 </body>
 </html>

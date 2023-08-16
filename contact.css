@@ -1,57 +1,35 @@
-a{
-    text-decoration: none;
-    color: aliceblue;
-    font-size: 28px;
-} header{
+header{
     background-image: url(atelier.jpg);
     background-size: cover;
-    margin-top: 100px;
-}
-.fixedHeader{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100vw;
-    height: 100px;
-    position: fixed;
-    top: 0;
-    background-color: black;
-    opacity: 0.8;
-    z-index: 99;
-}
-.logoContainer{
-    width: 85px;
-    background-color: aliceblue;
-}
-.logo{
-    width: 95%;
-    margin-top: 10px;
-}
-nav{
-    width: 60vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 25px;
+    animation: appear .5s ease-out;
 }
 .contactIntro{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    >button{
+        padding: 10px;
+        border: solid 1px rgb(247, 222, 161);
+    }
+    animation: appear 1s ease-out;
 }
+
 .introduction{
     width: 60vw;
-    padding: 30px;
-    margin-block: 45px;
+    padding-inline: 10vw;
+    height: auto;
+    margin-block: 10vh;
     background-color: black;
     opacity: 0.8;
     color: white;
     border-radius: 10px;
+    >h1{
+        font-size: 36px;
+    }
     >p{
-        font-size: 20px;
-        line-height: 35px;
+        font-size: 22px;
+        line-height: 40px;
     }
 }
 .mainContainer{
@@ -59,7 +37,12 @@ nav{
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
+    padding-top: 10vh;
+    >h2{
+        font-family: "fira-sans", sans-serif;
+        margin: 0;
+    }
 }
 .info{
     display: flex;
@@ -87,33 +70,103 @@ form{
     align-items: center;
     background-color: black;
     opacity: 0.8;
-    width: 40vw;
+    width: 50vw;
+    min-width: 300px;
     border-radius: 10px;
     margin-bottom: 25px;
 }
 fieldset{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     border: 1px solid;
-    width:  30vw;
     margin-block: 25px;
     color: white;
+    width: 40vw;
+    text-align: left;
+    >div{
+        width: 80%;
+        margin-block: 5px;
+    }
+    >div>label{
+        margin-block: 10px 5px;
+    }
+}
+.personInfo>div{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.obs>*{
+    margin-block: 10px 5px;
+}
+.news{
+    >div>input{
+        width: 20px;
+        margin-left: 10px;
+    }
+}
+textarea{
+    width: 90%;
 }
 legend{
     font-size: 22px;
 }
 .submit{
+    background-color: white;
+    padding: 4px 10px 5px;
+    border-radius: 25px;
     margin-block: 15px;
     font-size: 20px;
+    cursor: pointer;
 }
-footer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+.submit:hover{
     background-color: black;
-    opacity: 0.8;
-    height: 100px;
-    color: white;
-    >div{
-        font-size: 20px;
+    color: goldenrod;
+    box-shadow: 0 0 4px white;
+    transition: all .5s ease;
+}
+
+
+@media (max-width: 768px){
+    form{
+        width: 60vw;
+        >fieldset{
+            width: 50vw;
+        }
+    }
+    legend{
+        font-size: 18px;
+    }
+    .personInfo>div>input{
+        width: 100%;
+    }
+    .introduction{
+        >p{
+            font-size: 16px;
+            line-height: 30px;
+        }
+        >h1{
+            font-size: 30px;
+        }
+    }
+    .info{
+        flex-direction: column;
+        >div{
+            width: 70vw;
+        }
+    }
+    p{
+        font-size: 18px;
+    }
+    .news>div{
+        display: flex;
+        flex-direction: column;
+        >input{
+            margin-top: 5px;
+            margin-left: -5px;
+        }
     }
 }

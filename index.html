@@ -4,26 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
+    <script src="https://kit.fontawesome.com/ea282868fc.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="fixedHeader">
-            <div class="logoContainer">
-                <a href="index.html">
+            <div class="overflow">
+                <a class="logoContainer" href="index.html">
                     <img class="logo" src="logoRepair.png" alt="logo">
                 </a>
             </div>
             <div class="dropDownMenu">
-                <div class="dropDownBtn">
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="dropDownBtn">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </label>
                 <nav>                
                     <div><a href="index.html">Accueil</a></div>
                     <div><a href="contact.html">Contact</a></div>
@@ -48,6 +50,9 @@
     </header>
     <main>
         <section id="services">
+            <div class="servicesPhoto">
+                <img src="services.jpg" alt="services">
+            </div>
             <div>
                 <h2>Les services de Fix'n'Play</h2>
                 <ul>
@@ -74,32 +79,34 @@
         </section>
     </main>
         <footer>
-            <div class="footerInfo">
-                <div id="textContainer">
-                    <p>Adresse: 84 Rue Paul Bert, 62300 Lens</p>
-                    <p>Mail : <a href="mailto:louvrelensvallee@wanadoo.fr">louvrelensvallee@wanadoo.fr</a></p>
-                    <p>Téléphone : 03 21 25 26 27</p>
+            <div>
+                <div class="footerInfo">
+                    <div id="textContainer">
+                        <p>Adresse: 84 Rue Paul Bert, 62300 Lens</p>
+                        <p>Mail : <a href="contact-fnp@fixnplay.com">contact-fnp@fixnplay.com</a></p>
+                        <p>Téléphone : 03 21 25 26 27</p>
+                    </div>
+                    <div id="iconesReseau">
+                        <a href="https://www.facebook.com/POPSchoolFr/">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/popschoolfr/?hl=fr">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://fr.linkedin.com/company/popschoolp.l.u.s">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
                 </div>
-                <div id="iconesResaux">
-                    <a href="https://www.facebook.com/POPSchoolFr/">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/popschoolfr/?hl=fr">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://fr.linkedin.com/company/popschoolp.l.u.s">
-                        <i class="fa-brands fa-linkedin"></i>
-                    </a>
-                </div>
-                <div class="credit">Web-Dev-PopSchool-Lens-Promotion-2023</div>
-            </div>
-            <div class="gMap">
-                <iframe
+                <div class="gMap">
+                    <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.5725659593663!2d2.8093462802622726!3d50.430434926023636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd30f32995b9ed%3A0x227e61b83fe3bfcd!2sLouvre%20Lens%20Vall%C3%A9e!5e0!3m2!1sfr!2sfr!4v1691672755020!5m2!1sfr!2sfr"
-                    width="450" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                    width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
+        </div>
+        <div class="credit">\--Web-Dev-PopSchool-Lens-Promotion-2023--/</div>
     </footer>
 </body>
 </html>

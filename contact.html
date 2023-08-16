@@ -6,23 +6,33 @@
     <title>Accueil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ea282868fc.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
     <header>
         <div class="fixedHeader">
-            <div class="logoContainer">
-                <a href="index.html">
+            <div class="overflow">
+                <a class="logoContainer" href="index.html">
                     <img class="logo" src="logoRepair.png" alt="logo">
                 </a>
             </div>
-            <nav>
-                <div><a href="index.html">Accueil</a></div>
-                <div><a href="contact.html">Contact</a></div>
-                <div><a href="service.html">Services</a></div>
-            </nav>
+            <div class="dropDownMenu">
+                <input type="checkbox" id="toggle">
+                <label for="toggle" class="dropDownBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                <nav>                
+                    <div><a href="index.html">Accueil</a></div>
+                    <div><a href="contact.html">Contact</a></div>
+                    <div><a href="service.html">Services</a></div>
+                </nav>
+            </div>
         </div>
         <div class="contactIntro">
             <div class="introduction">
@@ -30,35 +40,29 @@
                 <p>Venez dans notre atelier Fix'n'Play pour bénéficier de nos conseils d'experts sur la réparation et l'entretien de vos instruments préférés!</p>
                 <p>Fix'n'Play vous garantit un accompagnement personnalisé en fonction de vos besoins, afin de vous procurer la meilleure expériences de jeu possible!</p>
             </div>
+            <button><a href="#form">Ajouter un commentaire</a></button>
         </div>
     </header>
     <main>
-        <section class="info">
-            <div>
-                <h1>titre</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quibusdam molestias consequuntur quam exercitationem non odio quidem sequi, beatae aut nobis! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, hic.</p>
-            </div>
-            <button><a href="#form">L'inscription, <br> C'est pas ici!</a></button>
-        </section>
         <section class="mainContainer">
             <h2>Contactez-nous!</h2>
             <form id="form" action="">
                 <fieldset class="personInfo">
                     <legend>Informations Personnelles</legend>
                     <div>
-                        <label for="nom">Nom :</label>
+                        <label for="nom">Nom : </label>
                         <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
                     </div>
                     <div>
-                        <label for="mail">Email :</label>
+                        <label for="mail">Email : </label>
                         <input type="email" id="email" name="email" placeholder="webdev@popschool.fr" required>
                     </div>
                     <div>
-                        <label for="telephone">Telephone :</label>
+                        <label for="telephone">Telephone : </label>
                         <input type="tel" id="telephone" name="telephone" placeholder="0677665544" required>
                     </div>
                     <div>
-                        <label for="Password">Mot de passe :</label>
+                        <label for="Password">Mot de passe : </label>
                         <input type="password" id="password" name="password" placeholder="*****" required>
                     </div>
                 </fieldset>
@@ -80,19 +84,15 @@
                         </label>
                     </div>
                     <div>
-                        <p>Des questions ou observations? C'est ici!</p>
-                        <div>
-                            <label for="question"></label>
+                        <div class="obs">
+                            <label for="question">Des questions ou observations?</label>
                             <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Ma guitare a des faux-contacts..."></textarea>
-                        </div>
-                        <div>
-                            
                         </div>
                     </div>
                 </fieldset>
-                <fieldset>
+                <fieldset class="news">
                     <legend>Newsletter</legend>
-                    <div class="news">
+                    <div>
                         <label for="newsletter">S'abonner à la newsletter</label>
                         <input type="checkbox" id="newsletter" name="nesletter">
                     </div>
@@ -102,7 +102,35 @@
         </section>
     </main>
     <footer>
-        <div>Web-Dev-PopSchool-Lens-Promotion-2023</div>
-    </footer>
+        <div>
+            <div class="footerInfo">
+                <div id="textContainer">
+                    <p>Adresse: 84 Rue Paul Bert, 62300 Lens</p>
+                    <p>Mail : <a href="mailto:contact-fnp@fixnplay.com">contact-fnp@fixnplay.com</a></p>
+                    <p>Téléphone : 03 21 25 26 27</p>
+                </div>
+                <div id="iconesReseau">
+                    <a href="https://www.facebook.com/POPSchoolFr/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/popschoolfr/?hl=fr">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://fr.linkedin.com/company/popschoolp.l.u.s">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="gMap">
+                <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.5725659593663!2d2.8093462802622726!3d50.430434926023636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd30f32995b9ed%3A0x227e61b83fe3bfcd!2sLouvre%20Lens%20Vall%C3%A9e!5e0!3m2!1sfr!2sfr!4v1691672755020!5m2!1sfr!2sfr"
+                width="350" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+    <div class="credit">\--Web-Dev-PopSchool-Lens-Promotion-2023--/</div>
+</footer>
+
 </body>
 </html>
